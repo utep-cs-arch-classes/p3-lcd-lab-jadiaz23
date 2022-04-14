@@ -1,0 +1,35 @@
+#include <msp430.h>
+#include <libTimer.h>
+#include "lcdutils.h"
+#include "lcddraw.h"
+#include "draw_shapes.h"
+
+// WARNING: LCD DISPLAY USES P1.0.  Do not touch!!! 
+
+void main()
+{
+  configureClocks();
+  lcd_init();
+
+  // clear the screen in case something is already on there
+  clearScreen(COLOR_BLUE);
+  //height, width, row, col, blue, green, red
+  draw_rectangle(35, 50, 36, screenWidth/2 , 0, 0, 255);//red part
+  draw_rectangle(25, 60, 60, screenWidth/2, 0, 0, 255);
+  draw_rectangle(20, 5, 65, 31, 0, 0, 0); //left side black
+  draw_rectangle(5, 44, 80, 63, 0, 0, 0 ); //middle black
+  draw_rectangle(20, 4, 65, 96, 0, 0, 0); //right side black
+  draw_rectangle(18, 42, 85, 64, 153, 210, 252); //for now skin
+  draw_rectangle(5, 15, 85, 40, 0, 0, 0); //horizontal line next to left eye
+  draw_rectangle(5, 15, 85, 86, 0, 0, 0); //horizontal line next to right eye
+  draw_rectangle(8, 5, 90, 40, 0, 0, 0); //vertical line next to left eye
+  draw_rectangle(8, 5, 90, 87, 0, 0, 0); //vertical line next to right eye
+  draw_rectangle(5, 5, 98, 45, 0, 0, 0);// bottom left tiny square
+  draw_rectangle(5, 5, 98, 82, 0, 0, 0); //bottom right tiny square
+  draw_rectangle(5, 33, 103, 63, 0, 0, 0);//bottom horizontal line
+  draw_rectangle(9, 5, 84, 55, 0, 0, 0);
+  
+  //  draw_triangle();
+  //  draw_circle();
+  or_sr(0x10);	/**< CPU OFF */
+}
