@@ -14,8 +14,49 @@ void main()
   // clear the screen in case something is already on there
   clearScreen(COLOR_BLUE);
   //height, width, row, col, blue, green, red
+  //0, 0, 7 is brown for the other block we gotta do next
+  draw_rectangle(70, 70, 35, 69, 0, 20, 20); //outer brown
+  draw_rectangle(60, 60, 35, 64, 0, 105, 191);//second outer brown big square for now
+  draw_rectangle(5, 55, 95, 66, 0, 105, 191); //second outer brown horizontal bottom line
+  draw_rectangle(55, 5, 40, 96, 0, 105, 191); //second outer brown vertical right line
+  draw_rectangle(50, 50, 40, 64, 15, 255, 255); //skin like color?
+  draw_rectangle(5, 45, 90, 66, 15, 255, 255); //skin like bottom horizontal line
+  draw_rectangle(45, 5, 45, 91, 15, 255, 255); //skin like right vertical line
+  draw_rectangle(5, 15, 35, 46, 255, 255, 255); //top left white horizontal line
+  draw_rectangle(5, 10, 40, 38, 255, 255, 255); //left white horizontal line again
+  draw_rectangle(15, 5, 40, 36, 255, 255, 255); //left white vertical line
+  draw_rectangle(5, 5, 60, 36, 255, 255, 255); ///tiny white square
+  draw_rectangle(20, 45, 45, 66, 255, 255, 255); //white block but its purple 4now
+  draw_rectangle(10, 25, 65, 71, 255, 255, 255); //mid white block 4now purple
+  draw_rectangle(10, 15, 80, 66, 255, 255, 255); //bottom white block 4now purple
+  
+  draw_rectangle(60, 5, 40, 31, 0, 0, 0); //left vertical black line       *
+  draw_rectangle(5, 5, 35, 36, 0, 0, 0); //top left tiny black square
+  draw_rectangle(5, 60, 30, 69, 0, 0, 0); //top horizontal black line
+  draw_rectangle(5, 5, 100, 36, 0, 0, 0); //bottom left tiny black square   border
+  draw_rectangle(5, 60, 105, 69, 0, 0, 0); //bottom horizontal black
+  draw_rectangle(5, 5, 100, 101, 0, 0, 0); //bottom right tiny black square
+  draw_rectangle(5, 5, 35, 101, 0, 0, 0); //top right tiny black square
+  draw_rectangle(60, 5, 40, 106, 0, 0, 0); // right vertical black line    *
+
+  draw_rectangle(10, 5, 50, 41, 0, 0, 0); //top left vertical black line question mark
+  draw_rectangle(5, 5, 45, 46, 0, 0, 0); //tiny top left black square
+  draw_rectangle(5, 30, 60, 59, 0, 0, 0); //horizontal mid black line
+  draw_rectangle(5, 15, 55, 66, 0, 0, 0); //2nd mid horizontal black line
+  draw_rectangle(5, 35, 40, 66, 0, 0, 0); //2nd top horizontal black line
+  draw_rectangle(5, 5, 45, 86, 0, 0, 0); //tiny top right black square
+  draw_rectangle(15, 5, 50, 91, 0, 0, 0); //right vertical black line
+  draw_rectangle(10, 5, 65, 56, 0, 0, 0);//left vertical black line
+  draw_rectangle(5, 5, 65, 86, 0, 0, 0); //tiny bottom right black square
+  draw_rectangle(5, 10, 70, 79, 0, 0, 0); //horizontal right black line
+  draw_rectangle(5, 15, 75, 66, 0, 0, 0); //horizontal mid black line 
+  draw_rectangle(10, 5, 80, 56, 0, 0, 0); //bottom vertical black line left
+  draw_rectangle(10, 5, 80, 76, 0, 0, 0); //bottom vertical black line right
+  draw_rectangle(5, 15, 90, 66, 0, 0, 0); //bottom vertical black line
+  
+  /* Mushroom
   draw_rectangle(15, 41, 45, 64 , 0, 0, 255);//top red part
-   draw_rectangle(30, 60, 55, screenWidth/2, 0, 0, 255);//middle red part
+  draw_rectangle(30, 60, 55, screenWidth/2, 0, 0, 255);//middle red part
   draw_rectangle(20, 5, 65, 31, 0, 0, 0); //left side black
   draw_rectangle(5, 44, 80, 63, 0, 0, 0 ); //middle black
   draw_rectangle(20, 4, 65, 96, 0, 0, 0); //right side black
@@ -45,7 +86,8 @@ void main()
   draw_rectangle(10, 5, 55, 87, 255, 255, 255);//right vertical white line
   draw_rectangle(10, 4, 50, 83, 255, 255, 255);//2nd right vertical white line
   draw_rectangle(5, 6, 50, 78, 255, 255, 255);//tiny white square on the right side
-
+  */
+  
   //  draw_triangle();
   //  draw_circle();
   or_sr(0x10);	/**< CPU OFF */
