@@ -15,6 +15,35 @@ void main()
   clearScreen(COLOR_BLUE);
   //height, width, row, col, blue, green, red
   //0, 0, 7 is brown for the other block we gotta do next
+  //0, 63, 127 is a nice yellow
+  draw_rectangle(70, 70, 35, 69, 0, 0, 15); //brownish color
+  draw_rectangle(60, 5, 40, 31, 0, 0, 0); //left vertical black line       *
+  draw_rectangle(5, 5, 35, 36, 0, 0, 0); //top left tiny black square
+  draw_rectangle(5, 60, 30, 69, 0, 0, 0); //top horizontal black line
+  draw_rectangle(5, 5, 100, 36, 0, 0, 0); //bottom left tiny black square   border
+  draw_rectangle(5, 60, 105, 69, 0, 0, 0); //bottom horizontal black
+  draw_rectangle(5, 5, 100, 101, 0, 0, 0); //bottom right tiny black square
+  draw_rectangle(5, 5, 35, 101, 0, 0, 0); //top right tiny black square
+  draw_rectangle(60, 5, 40, 106, 0, 0, 0); // right vertical black line    *
+  draw_rectangle(5, 5, 35, 41, 255, 255, 255); //top white square
+  draw_rectangle(5, 5, 40, 36, 255, 255, 255); //2nd white square
+  draw_rectangle(5, 10, 35, 49, 0, 255, 255); //top horizontal yellow line
+  draw_rectangle(5, 5, 40, 41, 0, 255, 255); //tiny yellow square top
+  draw_rectangle(10, 5, 45, 36, 0, 255, 255); //vertical yellow line
+  draw_rectangle(5, 5, 60, 36, 0, 255, 255); //tiny yellow square bot
+  draw_rectangle(5, 5, 60, 46, 0, 0, 0); //tiny black square left eye top*
+  draw_rectangle(5, 5, 65, 51, 0, 0, 0); //tiny black square left 2nd top*> left eye
+  draw_rectangle(5, 5, 70, 56, 0, 0, 0); //tiny black square left 3rd    *
+  draw_rectangle(5, 5, 70, 72, 0, 0, 0); //tiny black square right 3rd *
+  draw_rectangle(5, 5, 65, 77, 0, 0, 0); //tiny black square right 2nd * >right eye
+  draw_rectangle(5, 5, 60, 82, 0, 0, 0); //tiny black square right top *
+  draw_rectangle(5, 60, 100, 69, 0, 0, 0); //bottom horizontal black line
+  draw_rectangle(5, 5, 95, 36, 0, 0, 0); // bottom left tiny black square
+  draw_rectangle(60, 5, 40, 101, 0, 0, 0); // right vertical line 
+  draw_rectangle(5, 5, 95, 96, 0, 0, 0); //bottom right tiny black square
+  draw_rectangle(5, 5, 35, 96, 0, 0, 0); //top right tiny black square
+
+  /*  block
   draw_rectangle(70, 70, 35, 69, 0, 20, 20); //outer brown
   draw_rectangle(60, 60, 35, 64, 0, 105, 191);//second outer brown big square for now
   draw_rectangle(5, 55, 95, 66, 0, 105, 191); //second outer brown horizontal bottom line
@@ -29,16 +58,14 @@ void main()
   draw_rectangle(20, 45, 45, 66, 255, 255, 255); //white block but its purple 4now
   draw_rectangle(10, 25, 65, 71, 255, 255, 255); //mid white block 4now purple
   draw_rectangle(10, 15, 80, 66, 255, 255, 255); //bottom white block 4now purple
-  
   draw_rectangle(60, 5, 40, 31, 0, 0, 0); //left vertical black line       *
-  draw_rectangle(5, 5, 35, 36, 0, 0, 0); //top left tiny black square
-  draw_rectangle(5, 60, 30, 69, 0, 0, 0); //top horizontal black line
-  draw_rectangle(5, 5, 100, 36, 0, 0, 0); //bottom left tiny black square   border
-  draw_rectangle(5, 60, 105, 69, 0, 0, 0); //bottom horizontal black
-  draw_rectangle(5, 5, 100, 101, 0, 0, 0); //bottom right tiny black square
-  draw_rectangle(5, 5, 35, 101, 0, 0, 0); //top right tiny black square
+  draw_rectangle(5, 5, 35, 36, 0, 0, 0); //top left tiny black square      *
+  draw_rectangle(5, 60, 30, 69, 0, 0, 0); //top horizontal black line      *
+  draw_rectangle(5, 5, 100, 36, 0, 0, 0); //bottom left tiny black square  > border
+  draw_rectangle(5, 60, 105, 69, 0, 0, 0); //bottom horizontal black       *
+  draw_rectangle(5, 5, 100, 101, 0, 0, 0); //bottom right tiny black square*
+  draw_rectangle(5, 5, 35, 101, 0, 0, 0); //top right tiny black square    *
   draw_rectangle(60, 5, 40, 106, 0, 0, 0); // right vertical black line    *
-
   draw_rectangle(10, 5, 50, 41, 0, 0, 0); //top left vertical black line question mark
   draw_rectangle(5, 5, 45, 46, 0, 0, 0); //tiny top left black square
   draw_rectangle(5, 30, 60, 59, 0, 0, 0); //horizontal mid black line
@@ -53,6 +80,7 @@ void main()
   draw_rectangle(10, 5, 80, 56, 0, 0, 0); //bottom vertical black line left
   draw_rectangle(10, 5, 80, 76, 0, 0, 0); //bottom vertical black line right
   draw_rectangle(5, 15, 90, 66, 0, 0, 0); //bottom vertical black line
+  */
   
   /* Mushroom
   draw_rectangle(15, 41, 45, 64 , 0, 0, 255);//top red part
