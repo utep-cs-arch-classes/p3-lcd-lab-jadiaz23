@@ -16,6 +16,51 @@ void main()
   //height, width, row, col, blue, green, red
   //0, 0, 7 is brown for the other block we gotta do next
   //0, 63, 127 is a nice yellow
+
+  draw_rectangle(20, 82, 44, 64, 0, 0, 0);
+  draw_rectangle(30, 70, 39, 64, 15, 50, 255); //15, 50, 255  shitty orange mess with it later
+  draw_rectangle(10, 50, 69, 64, 15, 50, 255);
+  draw_rectangle(5, 5, 64, 31, 0, 0, 0);//left tiny black square
+  draw_rectangle(5, 5, 69, 36, 0, 0, 0);//2nd tiny black square
+  draw_rectangle(5, 10, 74, 44, 0, 0, 0);// tinyish rectangle black
+  draw_rectangle(5, 30, 79, 64, 0, 0, 0); //middle black line
+  draw_rectangle(5, 10, 74, 84, 0, 0, 0); //right rectangle black
+  draw_rectangle(5, 5, 69, 91, 0, 0, 0); //2nd tiny black square right
+  draw_rectangle(5, 5, 64, 96, 0, 0, 0); //right tiny black square
+  draw_rectangle(10, 15, 34, 36, 0, 0, 0); //left leaf part black *********
+  draw_rectangle(5, 5, 39, 46, 0, 0, 0); //tiny leaf part square           *left pedal
+  draw_rectangle(5, 10, 39, 39, 15, 50, 255); //orange left leaf           *
+  draw_rectangle(5, 5, 34, 36, 15, 50, 255); //tiny orange square          *
+  draw_rectangle(5, 5, 29, 36, 0, 0, 0); //tiny black square on top*********
+  draw_rectangle(10, 31, 34, 64, 0, 0, 0); // middle black ****************
+  draw_rectangle(5, 30, 39, 65, 15, 50, 255); //middle orange             *
+  draw_rectangle(10, 20, 29, 65, 15, 50, 255); //other middle orange      *
+  draw_rectangle(5, 20, 29, 65, 0, 0, 0); //other middle black            *middle pedal
+  draw_rectangle(5, 9, 29, 65, 15, 50, 255); //other other middle orange  *
+  draw_rectangle(5, 9, 24, 65, 0, 0, 0); //top middle black ***************
+  draw_rectangle(5, 18, 39, 90, 0, 0, 0); //middle black *************
+  draw_rectangle(10, 8, 34, 90, 15, 50, 255); //middle other orange  *right pedal
+  draw_rectangle(5, 8, 34, 90, 0, 0, 0); //other middle black        *
+  draw_rectangle(4, 4, 30, 90, 0, 0, 0); //black *********************
+  draw_rectangle(20, 35, 84, 72, 0, 0, 0); //black part in leaf
+  draw_rectangle(15, 65, 89, 62, 0, 0, 0); //2nd black part in leaf
+  draw_rectangle(10, 75, 94, 62, 0, 0, 0); //3rd black part in leaf
+  draw_rectangle(10, 25, 94, 43, 0, 110, 0); //dark green part left
+  draw_rectangle(10, 25, 94, 82, 0, 110, 0); //dark green part right
+  draw_rectangle(15, 5, 84, 62, 0, 127, 0); //light green part mid
+  draw_rectangle(5, 20, 94, 41, 0, 127, 0); //light green part left
+  draw_rectangle(5, 20, 94, 80, 0, 127, 0); //light green part right
+  draw_rectangle(5, 10, 89, 41, 0, 127, 0); //top light green part left
+  draw_rectangle(5, 10, 89, 80, 0, 127, 0); //top light green part right
+  draw_rectangle(10, 5, 84, 67, 0, 110, 0); //dark green mid
+  draw_rectangle(5, 5, 54, 42, 0, 0, 0); //left tiny square*************
+  draw_rectangle(5, 10, 50, 50, 0, 0, 0); //top part ******************>left eye
+  draw_rectangle(5, 5, 54, 57, 0, 0, 0); //right tiny square ***********
+  draw_rectangle(5, 5, 54, 67, 0, 0, 0); //right tiny square ******
+  draw_rectangle(5, 10, 50, 75, 0, 0, 0); //top part **************> right eye
+  draw_rectangle(5, 5, 54, 82, 0, 0, 0); //right tiny square ******
+
+  /* brown block
   draw_rectangle(70, 70, 35, 69, 0, 0, 15); //brownish color
   draw_rectangle(60, 5, 40, 31, 0, 0, 0); //left vertical black line       *
   draw_rectangle(5, 5, 35, 36, 0, 0, 0); //top left tiny black square
@@ -42,6 +87,7 @@ void main()
   draw_rectangle(60, 5, 40, 101, 0, 0, 0); // right vertical line 
   draw_rectangle(5, 5, 95, 96, 0, 0, 0); //bottom right tiny black square
   draw_rectangle(5, 5, 35, 96, 0, 0, 0); //top right tiny black square
+  */
 
   /*  block
   draw_rectangle(70, 70, 35, 69, 0, 20, 20); //outer brown
