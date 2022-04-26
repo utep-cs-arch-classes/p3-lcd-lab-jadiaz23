@@ -2,13 +2,29 @@
 #include "lcdutils.h"
 #include "lcddraw.h"
 
+
 void
+draw_moving_shapes(int height, int width, int row, int col, u_int blue, u_int green, u_int red)
+{
+  row+=55;
+  int left_col = col - (width / 2);
+  int top_row  = row - (height / 2);
+
+  u_int color = (blue << 11) | (green << 5) | red;
+  
+  // blank out the old rectangle
+  fillRectangle(left_col, top_row, width, height, color);
+  moving_rectangle(height, width, row, col, blue, green, red);
+}
+  
+void //int height, int width, int row, int col, u_int blue, u_int green, u_int red
 draw_rectangle(int height, int width, int row, int col, u_int blue, u_int green, u_int red)
 {
   // int height = 37;
   // int width  = 60;
   // int row = 50
   // int col = screenWidth / 2; //row is up or down, col is left or right
+  row+=49;
   int left_col = col - (width / 2);
   int top_row  = row - (height / 2);
 
@@ -18,6 +34,36 @@ draw_rectangle(int height, int width, int row, int col, u_int blue, u_int green,
   fillRectangle(left_col, row, width, height, color);
 }
 
+void
+moving_rectangle(int height, int width, int row, int col, u_int blue, u_int green, u_int red)
+{
+  static int x_vel = 10; //it was 10
+  static int y_vel = 5; //it was 5
+
+  int left_col = col - (width / 2);
+  int top_row  = row - (height / 2);
+
+  // unsigned int blue = 16, green = 0, red = 31;
+  unsigned int color = (blue << 11) | (green << 5) | red;
+
+  // draw rectangle at current position
+  fillRectangle(left_col, top_row, width, height, color);
+
+  // save current position
+  // to_draw->old_rect_row = to_draw->rect_row;
+  // to_draw->old_rect_col = to_draw->rect_col;
+
+  // update position
+  row += y_vel;
+  col += x_vel;
+
+  if ( (row + height / 2) >= screenHeight ||   // bottom
+       (row - height / 2) <= 0) {              // top
+    // top or bottom hit, reverse y velocity
+    y_vel = y_vel * -1;
+  }
+  
+}
 
 void
 draw_triangle(void)
