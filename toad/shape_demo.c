@@ -3,8 +3,24 @@
 #include "lcdutils.h"
 #include "lcddraw.h"
 #include "draw_shapes.h"
+#include "switches.h"
+#include "led.h"
 
-// WARNING: LCD DISPLAY USES P1.0.  Do not touch!!! 
+// WARNING: LCD DISPLAY USES P1.0.  Do not touch!!!
+char redraw_screen = 1;
+
+void update_shape(void){
+  if (switch1_state == down){
+    mushroom();
+  }
+  else if (switch2_state == down){
+    flower();
+  }
+  else{
+    block();
+  }
+}
+
 void flower(){
   int y = 0;
   int x = 5;
@@ -94,6 +110,7 @@ void bblock()
 }
  
 void block(){
+  clearScreen(COLOR_BLUE);
   draw_rectangle(70, 70, 35, 69, 0, 20, 20); //outer brown
   draw_rectangle(60, 60, 35, 64, 0, 105, 191);//second outer brown big square for now
   draw_rectangle(5, 55, 95, 66, 0, 105, 191); //second outer brown horizontal bottom line
@@ -171,17 +188,31 @@ void mushroom(){
   y-=5;
   }
 }
-  void main(){
+
+ void main(){
     configureClocks();
+    led_init();
+    switch_p2_init();
     lcd_init();
+    or_sr(0x8);
     clearScreen(COLOR_BLUE);
-    block();
-    
     // flower();
      // bblock();
-     mushroom();
+    //  mushroom();
     // block();
-    
-    enableWDTInterrupts();
-    or_sr(0x10);	/**< CPU OFF */
+    while(1){
+      if (redraw_screen){
+	redraw_screen = 0;
+	update_shape();
+      }
+      green_on = 0;
+      led_changed = 1;
+      led_update();
+      // enableWDTInterrupts();
+      or_sr(0x10);	/**< CPU OFF */
+
+      green_on = 1;
+      led_changed = 1;
+      led_update();
+    }
   }
