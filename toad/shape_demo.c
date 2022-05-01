@@ -5,6 +5,7 @@
 #include "draw_shapes.h"
 #include "switches.h"
 #include "led.h"
+#include "buzzer.h"
 
 // WARNING: LCD DISPLAY USES P1.0.  Do not touch!!!
 char redraw_screen = 1;
@@ -72,6 +73,7 @@ void flower(){
   bblock();
   y-=5;
   }
+  pop_up();
   // enableWDTInterrupts();
   // or_sr(0x10);
 }
@@ -187,6 +189,19 @@ void mushroom(){
   bblock();
   y-=5;
   }
+  pop_up();
+}
+void pop_up(){
+  buzzer_set_period(3824, 400);
+  buzzer_set_period(3608, 400);
+  buzzer_set_period(3405, 400);
+  buzzer_set_period(3214, 400);
+  buzzer_set_period(3034, 400);
+  buzzer_set_period(2863, 400);
+  buzzer_set_period(2703, 400);
+  buzzer_set_period(2551, 400);
+  buzzer_set_period(2408, 400);
+  buzzer_set_period(2273, 400);
 }
 
  void main(){
@@ -196,6 +211,7 @@ void mushroom(){
     lcd_init();
     or_sr(0x8);
     clearScreen(COLOR_BLUE);
+    buzzer_init();
     // flower();
      // bblock();
     //  mushroom();
